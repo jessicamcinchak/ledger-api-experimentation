@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<script src="d3.js"></script>
+<script src="d3/d3.js"></script>
+<script src="chartist/dist/chartist.js"></script>
+<script src="https://bnchdrff.github.io/d3.js/plugins/jsonp.js"></script>
 <style>
 </style>
 <body>
 <script>
-d3.jsonp()
+
+d3.jsonp("https://data.detroitledger.org/api/1.0/orgs.json?filters[has_boardmembers]=true", function (data) {
+	console.log(data.length);
+});
 
 </script>
 </body>
